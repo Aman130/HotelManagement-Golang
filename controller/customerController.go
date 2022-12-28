@@ -13,11 +13,11 @@ func GetInfo(c *gin.Context) {
 	c.JSON(200, &user)
 }
 
-func FetchInfo(c *gin.Context){
-	name:= c.Query("Name")
-	result :=[]models.Customer{}
+func FetchInfo(c *gin.Context) {
+	name := c.Query("name")
+	result := []models.Customer{}
 	config.DB.Raw("SELECT * FROM customers WHERE name = ?", name).Scan(&result)
-	c.JSON(200,result)
+	c.JSON(200, result)
 }
 
 func AddCustomer(c *gin.Context) {
