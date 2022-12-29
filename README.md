@@ -111,10 +111,15 @@ This API allows the user to book a room in the hotel
 the params will include-
 
 RoomId of the room that the user wants to book
+
 CustId of the customer
+
 Name of the customer
+
 Email of the customer
+
 Contact of the customer
+
 
 Work flow of booking a room
 
