@@ -39,6 +39,8 @@ It accepts a JSON
 
 /api/hotel/getAllRooms
 
+Gets all the rooms in a hotel
+
 ## 1.3) Get rooms based on a some price
 
 #### Method "GET"
