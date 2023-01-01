@@ -46,7 +46,7 @@ import (
 // }
 func HotelRoutes(router *gin.Engine) {
 
-	hotelapi := router.Group("/api/hotel")
+	hotelapi:= router.Group("/api/hotel")
 	{
 		hotelapi.GET("/getAllRooms", controller.GetRoom)
 		hotelapi.GET("/queryRooms", controller.QueryRooms)

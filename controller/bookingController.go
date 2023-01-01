@@ -1,14 +1,17 @@
 package controller
 
 import (
+	"fmt"
 	"strconv"
-
 	"github.com/Aman130/HotelManagement/config"
 	"github.com/Aman130/HotelManagement/models"
 	"github.com/gin-gonic/gin"
 )
 
 func BookRoom(c *gin.Context) {
+	url:= c.FullPath()
+	fmt.Println(url)
+	
 	roomid, _ := strconv.Atoi(c.Query("roomId"))
 	custId, _ := strconv.Atoi(c.Query("custId"))
 
@@ -45,7 +48,4 @@ func BookRoom(c *gin.Context) {
 			c.JSON(200, customer)
 		}
 	}
-	// if result.Error != nil {
-	// 	panic(result.Error)
-	// }
 }
